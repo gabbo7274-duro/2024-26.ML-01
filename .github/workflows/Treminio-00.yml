@@ -8,3 +8,7 @@ jobs:
       - run: echo "ciao sono una stringa"
       - run: echo "ciao sono una stringa 2" 
       - run: echo "python è bello"
+      - run : pip --version
+      - run: ls -la
+      - run: pwd
+      - run: env
