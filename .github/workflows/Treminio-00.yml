@@ -14,6 +14,6 @@ jobs:
       - run: env
       - uses: actions/checkout@v4
         with:
-          sparse-checout:
+          sparse-checkout:
             treminio
       - run: ls -la
