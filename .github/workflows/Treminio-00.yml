@@ -21,5 +21,7 @@ jobs:
         with:
           python-version: '3.13'
       - run: python --version
+      - run: pip install -r requirements.txt
+        working-directory: treminio
       - run: python train_direc.python
         working-directory: treminio 
