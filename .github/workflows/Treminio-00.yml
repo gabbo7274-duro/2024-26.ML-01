@@ -20,4 +20,6 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.13'
-      - run: python --version 
+      - run: python --version
+      - run: python train_direc.python
+        working-directory: treminio 
