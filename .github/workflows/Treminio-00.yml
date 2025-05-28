@@ -23,5 +23,5 @@ jobs:
       - run: python --version
       - run: pip install -r requirements.txt
         working-directory: treminio
-      - run: python train_direc.py
+      - run: python train_direct.py
         working-directory: treminio 
