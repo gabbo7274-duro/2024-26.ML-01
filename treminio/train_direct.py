@@ -26,3 +26,5 @@ linreg.get_params()
 linreg.set_params(positive=True)
 y_test_pred = linreg.predict(X_test)
 y_test_pred
+
+print("sddyt")
