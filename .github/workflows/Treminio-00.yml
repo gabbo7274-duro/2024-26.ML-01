@@ -25,3 +25,7 @@ jobs:
         working-directory: treminio
       - run: python train_direct.py
         working-directory: treminio 
+        -uses: actions/upload-artifact@v4
+        with:
+          name: best-artifact
+          pasth: treminio/artifact.joblib
