@@ -25,7 +25,7 @@ y_train = df_train["Salary"]
 X_test = df_test[["Years of Experience"]]
 y_test = df_test["Salary"]
 linreg = LinearRegression()
-linreg.fit(X_train, y_train)
+linregfit = linreg.fit(X_train, y_train)
 linreg.get_params()
 linreg.set_params(positive=True)
 y_test_pred = linreg.predict(X_test)
@@ -36,4 +36,4 @@ dump(linreg, 'treminio/artifact.joblib')
 print("Model saved to treminio/artifact.joblib")
 print("sddyt")
 
-joblib.dump(linreg, 'treminio/grid_search.joblib')
+joblib.dump(linregfit, 'treminio/grid_search.joblib')
