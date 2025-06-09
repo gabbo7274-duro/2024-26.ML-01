@@ -1,10 +1,14 @@
 import pandas as pd
+import os
 from sklearn.model_selection import train_test_split, RandomizedSearchCV, KFold
 from sklearn.pipeline import Pipeline
 from sklearn.compose import ColumnTransformer
 from sklearn.preprocessing import StandardScaler, OneHotEncoder
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_absolute_error, mean_absolute_percentage_error, make_scorer, r2_score, mean_squared_error
+from joblib import dump
+import os
+import joblib
 
 
 
@@ -27,4 +31,9 @@ linreg.set_params(positive=True)
 y_test_pred = linreg.predict(X_test)
 y_test_pred
 
+os.makedirs('treminio', exist_ok=True)
+dump(linreg, 'treminio/artifact.joblib')
+print("Model saved to treminio/artifact.joblib")
 print("sddyt")
+
+joblib.dump(linreg, 'treminio/grid_search.joblib')
